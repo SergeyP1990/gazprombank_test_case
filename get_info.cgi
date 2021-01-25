@@ -6,6 +6,7 @@ use warnings;
 use DBI;
 use CGI;
 
+my $cgi_query = CGI->new;
 my %config;
 
 sub parse_config {
@@ -75,3 +76,5 @@ sub handle_query {
     print $cgi->end_html;
  
 }
+
+handle_query($cgi_query);
